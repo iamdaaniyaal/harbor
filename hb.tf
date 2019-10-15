@@ -39,7 +39,7 @@ resource "google_compute_instance" "harbor" {
     name = "harbor"
   }
   description             = "${google_compute_address.harborip.address}"
-  metadata_startup_script = "sudo yum update -y; sudo yum install git -y; sudo yum install wget -y; git clone https://github.com/iamdaaniyaal/gcpterraform.git; cd gcpterraform/scripts; sudo chmod 777 hb.sh; sh hb.sh"
+  metadata_startup_script = "sudo yum update -y; sudo yum install git -y; sudo yum install wget -y; git clone https://github.com/iamdaaniyaal/harbor.git; cd /harbor; sudo chmod 777 hb.sh; sh hb.sh"
 
 
   service_account {

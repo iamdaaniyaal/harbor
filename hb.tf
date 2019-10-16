@@ -5,8 +5,8 @@ provider "google" {
 }
 
 resource "google_compute_address" "harborip" {
-  name   = "harborip"
-  region = "us-east1"
+  name   = "${var.harbor_instance_ip_name}"
+  region = "${var.harbor_instance_ip_region}"
 }
 
 resource "google_compute_instance" "harbor" {

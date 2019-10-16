@@ -10,7 +10,7 @@ source "google_compute_address" "harborip" {
 }
 
 resource "google_compute_instance" "harbor" {
-  name         = "harbor-ashok"
+  name         = "${var.instance_name}"
   machine_type = "n1-standard-1"
   zone         = "us-east1-b"
 

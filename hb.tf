@@ -4,7 +4,7 @@ provider "google" {
   region      = "${var.region}"
 }
 
-source "google_compute_address" "harborip" {
+resource "google_compute_address" "harborip" {
   name   = "harborip"
   region = "us-east1"
 }
